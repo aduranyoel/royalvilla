@@ -1,20 +1,3 @@
-/*
-Theme Name: One Page Express
-Theme URI: http://onepageexpress.com
-Author: Horea Radu
-Author URI: 
-Description: One Page Express is a beautiful WordPress Theme that can be used to create a one page website in minutes by drag and drop. In comes with a predesigned home page and over 30 ready to use content sections that you can easily customize. It also has lots of customization options (video background, slideshow background, header content types, etc) that will help you create a beautiful, unique one page website in no time. One Page Express is responsive so it works on mobile devices out of the box. DEMO: http://onepageexpress.com/#demos
-Version: 1.2.8
-License: GNU General Public License version 3
-License URI: http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
-Tags: one-column, right-sidebar, custom-header, custom-menu, custom-logo, full-width-template, theme-options, translation-ready, blog, featured-images, threaded-comments
-Text Domain: one-page-express
-
-This theme, like WordPress, is licensed under the GPL.
-*/
-
-/* reset css */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -2762,4 +2745,12 @@ a#fm2_drop_mainmenu_mobile_button span.caption:before {
         padding-left: 0px;
         padding-right: 0px;
     }
+}
+.language {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: #000;
+    background-color: #fff;
 }
