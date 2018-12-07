@@ -280,6 +280,7 @@ ol ol {
 body img {
     max-width: 100%;
     height: auto;
+    max-height: 100%;
 }
 
 /* =Forms
@@ -2746,11 +2747,10 @@ a#fm2_drop_mainmenu_mobile_button span.caption:before {
         padding-right: 0px;
     }
 }
+
 .language {
     position: absolute;
-    top: 0;
     right: 0;
-    padding: 10px;
-    color: #000;
+    padding: 15px;
     background-color: #fff;
 }
