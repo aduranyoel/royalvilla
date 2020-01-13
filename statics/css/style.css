@@ -3044,36 +3044,31 @@ img.custom-logo {
   justify-content: space-between;
   max-width: 600px;
 }
-.img-section-one div:first-of-type > img{
+.img-section-one div:first-of-type > img {
   width: 100%;
 }
-.img-section-one div:last-of-type > i{
+.img-section-one div:last-of-type > i {
   padding: 5px;
 }
-.img-section-one div:last-of-type > img{
+.img-section-one div:last-of-type > img {
   width: 50%;
 }
-@media (max-width: 500px){
-  .img-section-one div:last-of-type > img{
-    width: 100%;
-  }
-}
-img.about-images-right-rightimg{
+
+img.about-images-right-rightimg {
   margin-top: 0 !important;
 }
 img.about-images-right-leftimg {
   margin-top: -10% !important;
-
 }
 .img-container-end {
   display: flex;
   flex-direction: column;
   padding: 15px;
 }
-.img-container-end div{
+.img-container-end div {
   display: flex;
 }
-.img-container-end div > img{
+.img-container-end div > img {
   width: 50%;
   padding: 5px;
 }
