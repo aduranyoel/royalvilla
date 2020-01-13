@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-const morgan = require("morgan");
 const i18n = require("i18n-express");
 const hbs = require("express-handlebars");
 const app = express();
@@ -13,7 +12,6 @@ app.set("view engine", "hbs");
 app.set("views", "statics");
 
 // middlewares
-// app.use(morgan("dev"));
 app.use(express.static(rootUrl));
 app.use(
   i18n({
@@ -26,9 +24,6 @@ app.use(
 // routes
 app.get("/", (req, res) => {
   res.render("index", { showVideoEn: req.i18n_lang === "en", langEn: req.i18n_lang === "en" });
-});
-app.get("*", (req, res) => {
-  res.send("Ups!, resource not found.");
 });
 
 // start server
