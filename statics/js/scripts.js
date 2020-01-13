@@ -1,171 +1,4 @@
-// window.scrollEffects = {
-//   RevealFX111: {
-//     effect: "slide",
-//     parameters: {
-//       from: "left",
-//       distance: "50px",
-//       opacity: "0",
-//       start: "2"
-//     },
-//     over: "800ms",
-//     defaultDelay: "500ms",
-//     easing: "ease-out",
-//     viewportFactor: "0",
-//     preset: "custom",
-//     init: "false",
-//     "play-easing": "ease-out"
-//   }
-// };
-// window.contentSwap = {
-//   ContentSwap104: {
-//     effectType: "",
-//     contentType: "overlay",
-//     overflowEnabled: "false",
-//     effectDelay: "800",
-//     effectEasing: "Ease",
-//     overlayColor: "490A3D",
-//     innerColor: "ffffff",
-//     openPage: "same",
-//     name: "",
-//     captionType: "490A3D",
-//     operationType: "edit",
-//     hasls: "true",
-//     additionalWrapperClasses: "",
-//     direction: "bottom",
-//     useSameTemplate: "true"
-//   },
-//   ContentSwap103: {
-//     effectType: "",
-//     contentType: "overlay",
-//     overflowEnabled: "false",
-//     effectDelay: "800",
-//     effectEasing: "Ease",
-//     overlayColor: "490A3D",
-//     innerColor: "ffffff",
-//     openPage: "same",
-//     name: "",
-//     captionType: "490A3D",
-//     operationType: "edit",
-//     hasls: "true",
-//     additionalWrapperClasses: "",
-//     direction: "bottom",
-//     useSameTemplate: "true"
-//   },
-//   ContentSwap102: {
-//     effectType: "",
-//     contentType: "overlay",
-//     overflowEnabled: "false",
-//     effectDelay: "800",
-//     effectEasing: "Ease",
-//     overlayColor: "490A3D",
-//     innerColor: "ffffff",
-//     openPage: "same",
-//     name: "",
-//     captionType: "490A3D",
-//     operationType: "edit",
-//     hasls: "true",
-//     additionalWrapperClasses: "",
-//     direction: "bottom",
-//     useSameTemplate: "true"
-//   }
-// };
-
-// jQuery(document).ready(function($) {
-//   // scrollEffects
-//   jQuery("[reveal-fx]").each(function() {
-//     var element = jQuery(this);
-//     element.removeAttr("data-scrollreveal-initialized");
-//     element.removeAttr("data-scrollreveal-complete");
-//     if (!window.scrollEffects.hasOwnProperty(element.attr("reveal-fx"))) {
-//       element.show();
-//       return;
-//     }
-//     for (var prop in scrollEffects) {
-//       if (element.attr("reveal-fx") == prop) {
-//         element.attr("data-scrollReveal", prop);
-//         element.hide();
-//       }
-//     }
-//   });
-//   if (window.extendScrollReveal) {
-//     window.extendScrollReveal.init();
-//   }
-
-//   // hoverfx
-
-//   var contentSwapTimeout = setTimeout(function() {
-//     if (window.initHoverFX) {
-//       initHoverFX(window.contentSwap);
-//     }
-//   }, 10);
-//   jQuery(window).resize(function(e) {
-//     clearTimeout(contentSwapTimeout);
-//     contentSwapTimeout = setTimeout(function() {
-//       if (window.initHoverFX) {
-//         initHoverFX(window.contentSwap, null, e);
-//       }
-//     }, 150);
-//   });
-
-//   // background image
-
-//   var isMobile = function() {
-//     var viewportWidth = window.innerWidth,
-//       maxWidth = 767;
-
-//     var deviceMatch = /iphone|ipod|android|blackberry|mini|windows\sce|windows\sphone|iemobile|palm|webos|series60|symbianos|meego/i.test(
-//       navigator.userAgent
-//     );
-//     var sizeMatch;
-//     //var isLTIE9 = (window.flexiCssMenus.browser.name == "msie" && window.flexiCssMenus.browser.version < 9);
-//     if (window.matchMedia) {
-//       sizeMatch = window.matchMedia("(max-width:" + maxWidth + "px)").matches;
-//     } else {
-//       sizeMatch = viewportWidth <= maxWidth;
-//     }
-//     return deviceMatch || sizeMatch;
-//   };
-
-//   var isTablet = function() {
-//     var viewportWidth = window.innerWidth,
-//       minWidth = 768,
-//       maxWidth = 1024;
-//     var is_touch_device = "ontouchstart" in document.documentElement;
-
-//     var deviceMatch = /ipad|Win64|tablet/i.test(navigator.userAgent);
-//     var sizeMatch;
-//     //var isLTIE9 = (window.flexiCssMenus.browser.name == "msie" && window.flexiCssMenus.browser.version < 9);
-//     if (window.matchMedia) {
-//       sizeMatch = window.matchMedia("(max-width:" + maxWidth + "px) and (min-width:" + (minWidth + 1) + "px)").matches;
-//     } else {
-//       sizeMatch = viewportWidth <= maxWidth && viewportWidth >= minWidth;
-//     }
-//     return is_touch_device && (deviceMatch || sizeMatch);
-//   };
-
-//   if (isMobile() || isTablet()) {
-//     function setBackgrounds() {
-//       $('[data-bg="transparent"]').each(function(index, el) {
-//         var topPosition = (($(this).offset().top + (window.innerHeight - $(this).height()) / 2) / $("body").height()) * 100;
-//         var bgHeight = Math.max(window.innerHeight, $(this).outerHeight());
-
-//         $(this).css({
-//           "background-image": $("body").css("background-image"),
-//           "background-size": "auto " + bgHeight + "px",
-//           "background-repeat": "no-repeat",
-//           "background-position": "center top " + topPosition + "%"
-//         });
-//       });
-//     }
-
-//     $([window, document]).on("resize", function() {
-//       setBackgrounds();
-//     });
-
-//     setBackgrounds();
-//   }
-// });
-window.onscroll = function(e) {
+window.onscroll = function() {
   var wrapper = jQuery(".header-wrapper").height(),
     separator = jQuery(".header-separator").height(),
     space = wrapper - separator - 90;
@@ -179,21 +12,17 @@ window.onscroll = function(e) {
   }
   var section1 = jQuery("#about-1").offset().top;
   if (window.pageYOffset > section1 - 250) {
-    jQuery(".titleOne").show();
-    jQuery(".textOne").show();
+    jQuery(".titleOne").css('opacity', 1).addClass('bounceInLeft');
+    jQuery(".textOne").css('opacity', 1).addClass('bounceInRight');
   }
 
-  if (window.pageYOffset > section1 + 50) {
-    jQuery(".imgOne").show();
-  }
 
   var content3 = jQuery("#content-3").offset().top;
   if (window.pageYOffset > content3 - 300) {
-    jQuery(".imgTwo").show();
     var treeLength = jQuery(".treeOne").children().length;
     var i = 0;
     var intervalTree = setInterval(function() {
-      jQuery(jQuery(".treeOne").children()[i]).show();
+      jQuery(jQuery(".treeOne").children()[i]).css('opacity', 1).addClass('bounceInRight');
       i++;
       if (i === treeLength) clearInterval(intervalTree);
     }, 300);
@@ -201,11 +30,10 @@ window.onscroll = function(e) {
 
   var content4 = jQuery("#content-4").offset().top;
   if (window.pageYOffset > content4 - 300) {
-    jQuery(".imgThree").show();
     var lenTwo = jQuery(".treeTwo").children().length;
     var j = 0;
     var intervalTwo = setInterval(function() {
-      jQuery(jQuery(".treeTwo").children()[j]).show();
+      jQuery(jQuery(".treeTwo").children()[j]).css('opacity', 1).addClass('bounceInLeft');
       j++;
       if (j === lenTwo) clearInterval(intervalTwo);
     }, 200);
@@ -213,21 +41,37 @@ window.onscroll = function(e) {
 
   var features2 = jQuery("#features-2").offset().top;
   if (window.pageYOffset > features2 - 300) {
-    jQuery(".treeThree")
-      .children()
-      .show();
+    var lenThree = jQuery(".treeThree").children().length;
+    var c = 0;
+    var intervalExt = setInterval(function() {
+      jQuery(jQuery(".treeThree").children()[c]).css('opacity', 1).addClass('flipInY');
+      c++;
+      if (c === lenTwo) clearInterval(intervalExt);
+    }, 200);
+    
   }
   var about3 = jQuery("#about-3").offset().top;
   if (window.pageYOffset > about3 - 300) {
-    jQuery(".imgFour").show();
     var lenThree = jQuery(".treeFour").children().length;
     var k = 0;
     var intervalThree = setInterval(function() {
-      jQuery(jQuery(".treeFour").children()[k]).show();
+      jQuery(jQuery(".treeFour").children()[k]).css('opacity', 1).addClass('bounceInLeft');
       k++;
       if (k === lenThree) clearInterval(intervalThree);
     }, 200);
   }
+  
+  var content5 = jQuery("#content-5").offset().top;
+  if (window.pageYOffset > content5 - 300) {
+    var lenEnd = jQuery(".treeEnd").children().length;
+    var q = 0;
+    var intervalThree = setInterval(function() {
+      jQuery(jQuery(".treeEnd").children()[q]).css('opacity', 1).addClass('bounceInRight');
+      q++;
+      if (q === lenEnd) clearInterval(intervalThree);
+    }, 200);
+  }
+
 };
 
 // Galery
@@ -239,6 +83,26 @@ var itemsRooms = [
   },
   {
     src: "/galery/i/photos/DSC04726.JPG",
+    w: 1024,
+    h: 683
+  },
+  {
+    src: "/galery/i/photos/bano1.jpeg",
+    w: 1024,
+    h: 683
+  },
+  {
+    src: "/galery/i/photos/bano2.jpeg",
+    w: 1024,
+    h: 683
+  },
+  {
+    src: "/galery/i/photos/bano3.jpeg",
+    w: 1024,
+    h: 683
+  },
+  {
+    src: "/galery/i/photos/bano4.jpeg",
     w: 1024,
     h: 683
   },
