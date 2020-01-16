@@ -2994,8 +2994,11 @@ img.custom-logo {
     padding: 5px;
     display: inline-block;
   }
+  .img-container-end > div {
+    text-align: center;
+  }
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .img-section-one div > img {
     height: 200px;
   }
@@ -3085,4 +3088,3 @@ img.about-images-right-leftimg {
 .img-container-end div {
   padding: 15px;
 }
-
