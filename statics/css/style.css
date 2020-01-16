@@ -3065,14 +3065,11 @@ img.custom-logo {
   padding-left: 15px;
   padding-right: 15px;
 }
-
-/*
-.img-section-one div:last-of-type > i {
-  padding: 5px;
+.img-section-one div img {
+  -moz-box-shadow: 0 15px 80px -5px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 15px 80px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 80px -5px rgba(0, 0, 0, 0.25);
 }
-.img-section-one div:last-of-type > img {
-  width: 50%;
-} */
 
 img.about-images-right-rightimg {
   margin-top: 0 !important;
