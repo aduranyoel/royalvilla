@@ -1,2 +1,2 @@
 # royalvilla
-Un lugar apropiado donde encontrar todo lo que se necesita para tener perfectas vacaciones
+all the things you need  to have perfect holidays
