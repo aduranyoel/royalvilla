@@ -39,4 +39,5 @@ app.get("/", (req, res) => {
 });
 
 // start server
-app.listen(app.get("port"), () => console.log("server listening on port " + app.get("port")));
+const port = app.get("port");
+app.listen(port, () => console.log("server listening on port " + port));
