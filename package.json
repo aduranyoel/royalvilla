@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/yoet92/royalvilla#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.7.7",
     "i18n-express": "^1.1.3",
